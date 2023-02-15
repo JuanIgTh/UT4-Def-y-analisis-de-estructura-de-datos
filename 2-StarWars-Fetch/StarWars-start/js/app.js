@@ -5,12 +5,13 @@ const priceMinTag = document.querySelector('#filter-min-price');
 const btnFiltrarTag = document.getElementById("btn-filter");
 
 let figuresList = [];
+const holi = 2
 
 // TODO:Petició asíncona per recuperar les figures
 function getFigures() {
     fetch('./data/star-wars-figures.json')
         .then(response => response.json())
-        .then({
+        .then( data =>{
             figuresList = data;
             printFigures(data);
         });
@@ -39,16 +40,28 @@ function printFigures(listJSON) {
 function setFavourites() {
     const favouriteFigures = document.querySelectorAll('.fa-heart');
     favouriteFigures.forEach(e => {
-        e.addEventListener("click", function() {
-            alert("Has elegido un favorito");
+        e.addEventListener("click", function () {
             this.classList.toggle("on");
+            alert(figuresList[3]["name"]);
         });
     });
 }
 //////////////////////////////////////////////////////////////////////////////////////////////////////7
 // TODO: Filtra les figures per preu i les ordena
 function filterFigures() {
-  
+    let list = figuresList
+    .filter(e => (e.price >= priceMinTag.value && e.price <= priceTag.value))
+    .sort((a, b) => {
+        // Ordena de major a menor pel nom
+        if (a.name > b.name) return 1;
+        if (a.name < b.name) return -1;
+        return 0;
+    });
+
+if (list.length === 0)
+    listTag.innerHTML = "No hay figuras que coincidan con el filtro";
+else
+    printFigures(list);
 }
 
 /*
