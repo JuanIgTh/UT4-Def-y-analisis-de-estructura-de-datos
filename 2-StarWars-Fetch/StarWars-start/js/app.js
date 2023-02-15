@@ -8,20 +8,44 @@ let figuresList = [];
 
 // TODO:Petició asíncona per recuperar les figures
 function getFigures() {
-
+    fetch('./data/star-wars-figures.json')
+        .then(response => response.json())
+        .then({
+            figuresList = data;
+            printFigures(data);
+        });
 }
 
 
 // TODO:Crea les cards HTML de cada figura 
 function printFigures(listJSON) {
-   
+        listTag.innerHTML = "";
+        listJSON.forEach(figure => {
+            listTag.innerHTML += `
+                <article class="card">
+                    <img src="./img/${figure.photo}" alt="">
+                    <h3>${figure.name}</h3>
+                    <span>${figure.price}€</span>
+                    <div class="favorite">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                </article>
+            `;
+        });
+        setFavourites();
 }
 
 // TODO: Intercanvia el icone de favorit
 function setFavourites() {
-
+    const favouriteFigures = document.querySelectorAll('.fa-heart');
+    favouriteFigures.forEach(e => {
+        e.addEventListener("click", function() {
+            alert("Has elegido un favorito");
+            this.classList.toggle("on");
+        });
+    });
 }
-
+//////////////////////////////////////////////////////////////////////////////////////////////////////7
 // TODO: Filtra les figures per preu i les ordena
 function filterFigures() {
   
