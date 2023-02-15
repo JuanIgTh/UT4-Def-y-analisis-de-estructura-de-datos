@@ -1,0 +1,9 @@
+{
+    "id":1,
+    "titol": "El rey león",
+    "sinopsi": "Después del asesinato de su padre, un joven príncipe león huye de su reino solo para aprender el verdadero significado de responsabilidad y valentía.",
+    "genere": "Dibuixos animats",
+    "edat": 3,
+    "estrena": false,
+    "sessions": ["17:00", "19:00", "21:00", "23:00"]
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <style>
+    body {
+        /* background-image: linear-gradient(45deg, #6303B1, #ff0099);
+        transform: skewY(-11deg); */
+
+        background-image: linear-gradient(45deg, #d7d5d8, #f3f2f3);
+    }
+    </style>
+
+</head>
+<body>
+
+    <table class="table table-striped  table-dark table-hover">
+        <thead>
+            <tr>
+                <th scope="col">Nom</th>
+                <th scope="col">CPUs</th>
+                <th scope="col">RAM</th>
+                <th scope="col">Pantalla</th>
+                <th scope="col">Software</th>
+            </tr>
+        </thead>
+
+        <tbody id="">
+
+        </tbody>
+    </table>
+    <script>
+        fetch('./computer.json')
+    .then((response) => response.json())
+    .then((json) => alert(json));
+
+    </script>
+
+    
+</body>
+</html>

@@ -1,0 +1,14 @@
+{
+    "id":1,
+    "titol":"Las islas Canarias al completo",
+    "portSortida": "Palma",
+    "descripcio": "Un viatge increible",
+    "dataIni": "01/06/2021",
+    "dataFin": "15/06/2021",
+    "preu": 1200.30,
+    "itenerari": [ 
+        {"ciutat":"Santa Cruz de ternerife", "pais":"España", "dias":4},
+        {"ciutat":"Lanzarote", "pais":"España", "dias":5},
+        {"ciutat":"El Hierro", "pais":"España", "dias":6}
+    ]
+}

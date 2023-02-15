@@ -1,0 +1,24 @@
+{
+    "id":1,
+    "fecha":"25/11/2005",
+    "pagada": true,
+    "descuento":10,
+    "cliente":{
+        "dni": "50678987T",
+        "nombre":"Óscar",
+        "apellidos":"Santos Pérez",
+        "telefono":"678567345",
+        "direccion":{
+            "calle":"c/ vázquez azurnia",
+            "numero":5,
+            "piso":1,
+            "puerta":"A",
+            "CP":"07011" 
+        }
+    },
+    "productos":[
+        {"id":1, "nombre":"Jersey de lana", "color":"azul", "precio":40},
+        {"id":2, "nombre":"Pantalón vaquero", "precio":30},
+        {"id":3, "nombre":"Camisa vestir", "precio":40}
+    ]
+}

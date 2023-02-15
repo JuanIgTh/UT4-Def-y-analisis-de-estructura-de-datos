@@ -1,0 +1,13 @@
+{
+    "id":1,
+    "titulo":"Piratas del caribe",
+    "genero": ["aventuras"],
+    "pegi": 12,
+    "precio": 59,
+    "desarrolador":"Activision",
+    "editor":"Microsoft studio",
+    "release":"26/11/2015",
+    "plataformas":["playstation 5", "xbox one", "android mobile"],
+    "idiomas":["Español", "Francés", "Catalán", "Italiano"]
+
+}
